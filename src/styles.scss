@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+//@import'~bootstrap/dist/css/bootstrap.min.css';
+//node_modules\bootstrap\dist\css\bootstrap.min.css
+//node_modules\bootstrap\dist\css\bootstrap.min.css
+
+.even{
+    background-color: aqua;
+    color:red($color: #000000);
+}
+
+.odd{
+    background-color: rgb(215, 215, 250);
+    color:red($color: #000000);
+}

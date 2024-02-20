@@ -1,0 +1,23 @@
+<p>rooms works!</p>
+<h1>{{hotelname}}  </h1>
+
+<app-header> </app-header>
+
+<div [hidden]="hiderooms">
+
+Number of Rooms is :
+<div [ngStyle]="    { 'color' :rooms.availableRooms?  'green' :'red'}"
+[innerText]="NumberOfRooms"></div>  <!--property binding-->
+
+</div>
+<div   *ngIf="SelectedRoom ">
+   {{SelectedRoom  |json}}
+   
+</div>
+
+<div *ngIf="rooms.availableRooms>0">
+   <app-rooms-list [rooms]="roomlist"
+   (SelectedRoom)="selectRoom($event)"></app-rooms-list>
+</div>
+
+<button (click)="Toggle()">toggle</button>   

@@ -1,0 +1,31 @@
+<p>rooms-list works!</p>
+Rooms List
+<!--!{{roomlist  |json}} -->
+<table>
+  <tr>
+    <th>EVEN/ODD</th>
+    <th>Room Number</th>
+    <th>Room Type</th>
+    <th>Amenities</th>
+    <th>price</th>
+    <th>photos</th>
+    <th>checkin-time</th>
+    <th>checkout-time</th>
+    <th>Rating</th>
+    <th>Select Room</th>
+  </tr>
+  <tr *ngFor="let room of rooms; let e = even; let o = odd">
+    <td>{{ e ? "Even" : "odd" }}</td>
+    <td>{{ room.roomNumber }}</td>
+    <td>{{ room.roomtype }}</td>
+    <td>{{ room.amenities }}</td>
+    <td>{{ room.price }}</td>
+
+    <td>{{ room.checkintime }}</td>
+    <td>{{ room.checkoutime }}</td>
+    <td>{{ room.rating }}</td>
+    <td>
+      <button class="btn btn-primary" (click)="selectRoom(room)"></button>
+    </td>
+  </tr>
+</table>
